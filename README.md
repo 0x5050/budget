@@ -1,4 +1,5 @@
 # budget
+<<<<<<< HEAD
 
 > Budget Managment
 
@@ -20,3 +21,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+=======
+Application to manage budget
+>>>>>>> 1db32f1937ad52a4c73f0d04704bbfbb3af22044
