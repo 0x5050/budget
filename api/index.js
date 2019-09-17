@@ -1,9 +1,10 @@
 import express from 'express'
+import routes from './routes'
+
 const app = express()
 
-app.get('/', (req, res, next) => {
-  res.send('API root')
-})
+app.use('/v1', routes.v1)
+
 // export the server middleware
 module.exports = {
   path: '/api',

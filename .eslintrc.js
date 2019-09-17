@@ -162,10 +162,6 @@ module.exports = {
       'error',
       'never'
     ],
-    'func-style': [
-      'error',
-      'expression'
-    ],
     'implicit-arrow-linebreak': [
       'error',
       'beside'
