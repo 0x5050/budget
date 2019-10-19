@@ -1,10 +1,12 @@
 @import "../../variables/colors";
+@import "../../variables/custom";
 
 .a-input {
-  width: 180px;
-  font-size: 1.2em;
+  width: $InputWidth;
+  font-size: $InputFontSize;
+  padding-left: $InputPadding;
   border: unset;
-  border-bottom: 1px solid Gray;
+  border-bottom: 1px solid $Silver_Chalice;
 
   &:focus {
     outline: none;
