@@ -1,0 +1,45 @@
+@import '../../variables/colors';
+@import '../../variables/custom';
+
+.a-select {
+  width: $InputWidth;
+  font-size: $InputFontSize;
+  padding-left: $InputPadding;
+  border: unset;
+  border-bottom: 1px solid $Silver_Chalice;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, $Blue 50%),
+    linear-gradient(135deg, $Blue 50%, transparent 50%);
+  background-position:
+    calc(100% - 10px) calc(1em - 5px),
+    calc(100% - 5px) calc(1em - 5px),
+    calc(100% - 2.5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+
+  &:focus {
+    background-image:
+      linear-gradient(45deg, $Blue 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, $Blue 50%);
+    background-position:
+      calc(100% - 5px) .5em,
+      calc(100% - 10px) .5em,
+      calc(100% - 1.5em) .5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: .5
+  }
+}
