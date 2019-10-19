@@ -1,0 +1,35 @@
+.m-input-container {
+  width: 180px;
+  grid-template-rows: 16px 24px 16px;
+  display: grid;
+}
+
+.m-input-label {
+  height: 16px;
+  margin: 0;
+  font-weight: 500;
+  opacity: 0;
+
+  &.f-animation {
+    animation-name: input_label_transition;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+  }
+
+  @keyframes input_label_transition {
+    from {
+      transform: translateY(5px);
+      font-size: .9em;
+      opacity: 0;
+    }
+    to {
+      font-size: .8em;
+      opacity: 1;
+    }
+  }
+}
+
+.m-input-validation-message {
+  @extend .f-text-danger;
+  font-size: 0.8em;
+}
