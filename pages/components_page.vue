@@ -9,6 +9,7 @@
     />
     input: {{ text }}
     <br>
+    Select with label
     <m-select
       label="label"
       :options="options"
