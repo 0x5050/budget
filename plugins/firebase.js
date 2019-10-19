@@ -10,12 +10,6 @@ const firebaseConfig = {
   appID: '1:543789972306:web:414e578b1c31482b92d88b',
 }
 
-// let app = null
-if (!firebase.apps.length) {
-  // app = firebase.initializeApp(firebaseConfig)
-  firebase.initializeApp(firebaseConfig)
-}
-/*
- * TODO: Problems with db
- * export const db = app.database()
- */
+const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : null
+
+export const db = app !== null ? app.database() : null
