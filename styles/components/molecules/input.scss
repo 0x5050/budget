@@ -8,6 +8,7 @@
   height: 16px;
   margin: 0;
   font-weight: 500;
+  font-size: .9em;
   opacity: 0;
 
   &.f-animation {
@@ -19,7 +20,6 @@
   @keyframes input_label_transition {
     from {
       transform: translateY(5px);
-      font-size: .9em;
       opacity: 0;
     }
     to {

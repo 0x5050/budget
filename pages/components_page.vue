@@ -8,18 +8,33 @@
       @input="setText"
     />
     input: {{ text }}
+    <br>
+    <m-select
+      label="label"
+      :options="options"
+    />
   </div>
 </template>
 
 <script>
 import MInput from '../components/molecules/validated-input'
+import MSelect from '../components/molecules/select'
 
 export default {
   name: 'PAtomsPage',
-  components: { MInput },
+  components: { MSelect, MInput },
   data: () => ({
     text: '',
-    validationMessage: '',
+    options: [
+      {
+        value: 0,
+        label: 'zero'
+      },
+      {
+        value: 1,
+        label: 'one'
+      },
+    ]
   }),
   computed: {
     validation() {
