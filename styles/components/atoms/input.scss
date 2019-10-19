@@ -1,0 +1,16 @@
+@import "../../variables/colors";
+
+.a-input {
+  width: 180px;
+  font-size: 1.2em;
+  border: unset;
+  border-bottom: 1px solid Gray;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.a-input.f-validation {
+  border-bottom-color: $Red;
+}
