@@ -23,9 +23,12 @@
         >
           GitHub
         </a>
-        <button @click="googleSignIn">
-          Test
-        </button>
+        <a
+          class="button--grey"
+          @click="googleSignIn"
+        >
+          Google Login (Firebase test)
+        </a>
       </div>
     </div>
   </div>
@@ -43,9 +46,8 @@ export default {
       this.provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithPopup(this.provider).then((result) => {
         // store the user ore wathever
-        this.$router.push('/home')
-      }).catch((e) => {
-        this.$snotify.error(e.message)
+      }).catch((error) => {
+        this.$snotify.error(error.message)
       })
     }
   }
