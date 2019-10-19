@@ -23,6 +23,12 @@
         >
           GitHub
         </a>
+        <router-link
+          class="button--grey"
+          to="/components_page"
+        >
+          Components
+        </router-link>
       </div>
     </div>
   </div>
