@@ -2,10 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "~*": ["./*"],
       "~/*": ["./*"],
+      "@*": ["./*"],
       "@/*": ["./*"],
-      "#/*": ["./compnents/*"],
-      "##/*": ["./pages/*"],
+      "#*": ["./components/*"],
+      "#/*": ["./components/*"],
+      "##*": ["./pages/*"],
+      "##/*": ["./pages/*"]
     }
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
