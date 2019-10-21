@@ -86,3 +86,12 @@ sw.*
 
 # Vim swap files
 *.swp
+
+functions/nuxt
+functions/nuxt.config.js
+
+src/dist
+src/nuxt
+src/_nux
+
+public
