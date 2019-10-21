@@ -3,11 +3,17 @@
     "source": "functions",
     "predeploy": [
       "npm --prefix src run build && rm -rf functions/nuxt && cp -r src/nuxt/ functions/nuxt/ && cp src/nuxt.config.js functions/"
+    ],
+    "postdeploy": [
+      "rm -rf functions/nuxt.config.js && rm -rf functions/nuxt"
     ]
   },
   "hosting": {
     "predeploy": [
       "rm -rf public/* && cp -a src/dist/. public/ && cp -a src/static/. public/"
+    ],
+    "postdeploy": [
+      "rm -rf src/nuxt && rm -rf src/dist"
     ],
     "public": "public",
     "ignore": [
