@@ -4,11 +4,12 @@
   "description": "Budget Managment",
   "author": "0x5050",
   "scripts": {
-    "dev": "npm run --prefix src build && cp src/nuxt.config.js functions/nuxt.config.js && cp -R functions/nuxt/dist/ public && cp -R src/static/* public && firebase serve",
-    "start": "npm run dev",
-    "deploy": "firebase deploy",
-    "nuxt-build": "npm run --prefix src build",
-    "nuxt-test": "npm run --prefix src test"
+    "dev": "npm run label && npm run --prefix src build && cp src/nuxt.config.js functions/nuxt.config.js && cp -R functions/nuxt/dist/ public && cp -R src/static/* public && firebase serve",
+    "start": "npm run label && npm run dev",
+    "deploy": "npm run label && firebase deploy",
+    "nuxt-build": "npm run label && npm run --prefix src build",
+    "nuxt-test": "npm run label &&  npm run --prefix src test",
+    "label": "node label.js"
   },
   "repository": {
     "type": "git",
