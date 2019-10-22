@@ -1,0 +1,21 @@
+{
+  "name": "budget",
+  "version": "1.0.0",
+  "description": "Budget Managment",
+  "scripts": {
+    "dev": "npm run --prefix src build && cp src/nuxt.config.js functions/nuxt.config.js && cp -R functions/nuxt/dist/ public && cp -R src/static/* public && firebase serve",
+    "start": "npm run dev",
+    "deploy": "firebase deploy",
+    "build": "npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x5050/budget.git"
+  },
+  "author": "0x5050",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0x5050/budget/issues"
+  },
+  "homepage": "https://github.com/0x5050/budget#readme"
+}
