@@ -11,7 +11,7 @@ before_script:
 
 script:
   - npm --prefix src install
-  - npm --functions src install
+  - npm --prefix functions install
 
 after_success:
   - firebase deploy --token hrejr2fpXK7NMoq9GKzRo2geSL3ru7JhJUWKvrC6DpBYt3nY/3qaeW9Tpqum81z3S9/W0e42Jq8ohBXylyqmd1WJgjXRb6fs6RHWHKSrF2weEvpp9b6Ku6EX/2TK5hSgr6riJu2hs3N3ES5Zx/jZlEZQu/Qj82NmPFHqsYZtILetxX+r2WOkGJb1tq6kg6Pkd2kvS5+1gSIpYC6TCCFGxBEBlryZEyrfj5Le9UN4YcDSxnpAVUTO/00XaBgg/xPi5QNDhFE7YxvRXid9E0ZMqP75UXjuLYaoj9jGZCSmPMmgmwD8r4YQO7LlEmzmzLPpQAr1DpZiM25Za6sr4HB41kfzYGSio7rd/4tLc1FQql2ykpNV5aOamJbgrDxM0U+V7QGbtA7mw/vyvw9MswGovAxly299YeuymcjalmfqiQKxcxUa708NDRfGA9TMKel+dmIPxd/prnWzyKD4Q04PjvSiBVz0UPuSl0JMGCJVZiTtxG3ppVTWghb5KXkLzvK3foKElaTHQUn78qpnGKnicPHWlD85YE59P0BCqFbCQ7BYr2kN1RAmWv+qKkiXuAWan28mjH61h5d5IiYQAONB/zd1Blkt+CZtAI5aHA1/tcaFFkDoBLJAE45IKJwpilbinWH2FseoJQLvD/HNQQ1znBQbkKhEAH7VP6shRYCidAc= --non-interactive
