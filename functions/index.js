@@ -13,7 +13,7 @@ const config = {
 }
 const nuxt = new Nuxt(config)
 
-function handleRequest(req, res) {
+const handleRequest = (req, res) => {
   res.set('Cache-Control', 'public, max-age=600, s-maxage=1200')
   nuxt.renderRoute('/').then(result => {
     res.send(result.html)
