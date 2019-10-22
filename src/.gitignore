@@ -86,6 +86,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-#firebase
-.firebase

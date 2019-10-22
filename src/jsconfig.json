@@ -8,5 +8,5 @@
       "##/*": ["./pages/*"],
     }
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["src/node_modules", "src/.nuxt", "dist"]
 }
