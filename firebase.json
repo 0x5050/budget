@@ -8,6 +8,9 @@
     "predeploy": [
       "cp -R functions/nuxt/dist/ public && cp -R src/static/* public"
     ],
+    "postdeploy": [
+      "rm -rf public && rm -rf functions/nuxt"
+    ],
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -17,7 +20,7 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "nuxtApp"
+        "function": "nuxt"
       }
     ]
   }

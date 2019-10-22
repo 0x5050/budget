@@ -92,3 +92,6 @@ sw.*
 
 #firebase hosting
 public
+
+#firebase functions
+functions/nuxt
