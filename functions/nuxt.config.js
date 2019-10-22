@@ -63,7 +63,11 @@ module.exports = {
     }
   },
   /*
+   * Output directory
+   */
+  buildDir: '../functions/nuxt',
+  /*
    ** Middleware
    */
-  serverMiddleware: ['~/api/']
+  serverMiddleware: []
 }

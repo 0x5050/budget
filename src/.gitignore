@@ -86,12 +86,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-#firebase
-.firebase
-
-#firebase hosting
-public
-
-#firebase functions
-functions/nuxt
