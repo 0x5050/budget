@@ -1,6 +1,10 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## [0.0.5] - 22-10-2019
+### Added
+- CI tests
+
 ## [0.0.4] - 22-10-2019
 ### Added
 - Added firebase:

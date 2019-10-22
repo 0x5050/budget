@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/0x5050/budget.svg?branch=master)](https://travis-ci.org/0x5050/budget)
+
 # Build Setup
 
 ## install dependencies
