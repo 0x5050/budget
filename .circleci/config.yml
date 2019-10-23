@@ -33,11 +33,5 @@ jobs:
         - npm --prefix src install
         - npm --prefix functions install
 
-      - save_cache:
-          paths:
-            - src/node_modules
-            - functions/node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
       # deploy!
       - run: firebase deploy --token $CIRCLE_FIREBASE
