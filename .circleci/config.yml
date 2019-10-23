@@ -32,12 +32,15 @@ jobs:
           key: dependency-cache-{{ checksum "functions/package-lock.json" }}
           paths:
             - functions/node_modules
+      - run:
+          command: ls -la
   deploy:
     working_directory: ~/repo
     docker:
       - image: circleci/node:10
     steps:
-      - checkout
+      - run:
+          command: ls -la
       - run:
           name: Install firebase tools
           command: sudo npm install -g firebase-tools
