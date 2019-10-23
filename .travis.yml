@@ -14,7 +14,7 @@ script:
   - npm --prefix functions install
 
 after_success:
-  - firebase deploy --token 1/LS2KG7Mzy4jm6vE5xAZBwexOHCsSOcND3xKbQTBwYfI
+  - firebase deploy --token $FIREBASE-KEYg
 
 notifications:
   email:
