@@ -36,17 +36,9 @@ jobs:
           command: ls -la
   deploy:
     working_directory: ~/repo
-    docker:
-      - image: circleci/node:10
     steps:
       - run:
           command: ls -la
-      - run:
-          name: Install firebase tools
-          command: sudo npm install -g firebase-tools
-      - run:
-          name: Deploy
-          command: firebase deploy --token $CIRCLE_FIREBASE
 
 workflows:
   version: 2
