@@ -33,13 +33,17 @@ jobs:
         paths:
           - functions/node_modules
     deploy:
-      - checkout
-      - run:
-        name: Install firebase tools
-        command: sudo npm install -g firebase-tools
-      - run:
-        name: Deploy
-        command: firebase deploy --token $CIRCLE_FIREBASE
+      working_directory: ~/repo
+      docker:
+        - image: circleci/node:10
+      steps:
+        - checkout
+        - run:
+          name: Install firebase tools
+          command: sudo npm install -g firebase-tools
+        - run:
+          name: Deploy
+          command: firebase deploy --token $CIRCLE_FIREBASE
 
 workflows:
   version: 2
