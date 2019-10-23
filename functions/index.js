@@ -1,8 +1,11 @@
 const functions = require('firebase-functions')
 const express = require('express')
 const { Nuxt } = require('nuxt')
+const api = require('./routes')
 
 const app = express()
+
+app.use('/api/v1', api.v1)
 
 const config = {
   dev: false,
