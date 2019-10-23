@@ -7,34 +7,49 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update npm
-          command: 'sudo npm install -g npm@latest'
+        name: Update npm
+        command: 'sudo npm install -g npm@latest'
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+        key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
-          name: Install npm
-          command: npm install
+        name: Install npm
+        command: npm install
       - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-          paths:
-            - node_modules
+        key: dependency-cache-{{ checksum "package-lock.json" }}
+        paths:
+          - node_modules
       - run:
-          name: Install nuxt
-          command: npm --prefix src install
+        name: Install nuxt
+        command: npm --prefix src install
       - save_cache:
-          key: dependency-cache-{{ checksum "src/package-lock.json" }}
-          paths:
-            - src/node_modules
+        key: dependency-cache-{{ checksum "src/package-lock.json" }}
+        paths:
+          - src/node_modules
       - run:
-          name: Install functions
-          command: npm --prefix functions install
+        name: Install functions
+        command: npm --prefix functions install
       - save_cache:
-          key: dependency-cache-{{ checksum "functions/package-lock.json" }}
-          paths:
-            - functions/node_modules
+        key: dependency-cache-{{ checksum "functions/package-lock.json" }}
+        paths:
+          - functions/node_modules
+    deploy:
+      - checkout
       - run:
-          name: Install firebase tools
-          command: sudo npm install -g firebase-tools
+        name: Install firebase tools
+        command: sudo npm install -g firebase-tools
       - run:
-          name: Deploy
-          command: firebase deploy --token $CIRCLE_FIREBASE
+        name: Deploy
+        command: firebase deploy --token $CIRCLE_FIREBASE
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+        requires:
+          - build
+        filters:
+          branches:
+            only:
+              - master
